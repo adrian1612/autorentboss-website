@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <meta name="theme-color" content="#12324b">
+  <meta name="description" content="AutoRentBoss Privacy Policy — local rental records, personal data, documents, Google AdMob, encrypted backups, retention, and privacy inquiries.">
+  <title>Privacy Policy — AutoRentBoss</title>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="wordmark" href="./index.html" aria-label="AutoRentBoss home"><span class="brand-mark" aria-hidden="true">AR</span><span>AutoRent<span class="wordmark-accent">Boss</span></span></a>
+      <nav aria-label="Main navigation"><a class="nav-link active" href="./privacy.html" aria-current="page">Privacy Policy</a><a class="nav-link nav-link-outline" href="./index.html">Home</a></nav>
+    </div>
+  </header>
+  <main id="main">
+    <section class="policy-hero"><div class="container narrow">
+      <p class="eyebrow">Privacy &amp; transparency</p>
+      <h1>Privacy Policy</h1>
+      <p class="policy-lead">How the AutoRentBoss Android application handles rental business information, personal records, backups, advertising, and privacy choices.</p>
+      <p class="policy-date"><strong>Effective:</strong> October 11, 2026 <span aria-hidden="true">·</span> <strong>Application:</strong> AutoRentBoss (Android)</p>
+    </div></section>
+    <div class="container policy-layout">
+      <nav class="policy-toc" aria-label="Privacy policy sections">
+        <p>On this page</p>
+        <a href="#who">Who we are</a>
+        <a href="#data">Information handled</a>
+        <a href="#local">Local storage</a>
+        <a href="#camera">Camera &amp; documents</a>
+        <a href="#ads">Ads &amp; consent</a>
+        <a href="#network">Internet &amp; third parties</a>
+        <a href="#backups">Backups &amp; sharing</a>
+        <a href="#retention">Retention &amp; deletion</a>
+        <a href="#security">Security</a>
+        <a href="#rights">Your choices</a>
+        <a href="#children">Children</a>
+        <a href="#updates">Policy updates</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <article class="policy-content">
+        <section id="who">
+          <h2>1. Who we are and the scope of this policy</h2>
+          <p>AutoRentBoss (“the app”) is a car-rental management application developed and maintained under the AutoRentBoss name. It is intended for rental business operators managing vehicles, reservations, renters, payments, deposits, agreements, and returns.</p>
+          <p>This policy describes data handled by the app and its integrated services. The rental business using AutoRentBoss determines what customer information it enters, why it needs that information, and how long it retains its business records. Renters seeking access to records held by a particular rental operator should contact that operator directly.</p>
+          <p>The accompanying website is a static information site; it does not ask visitors to create an account or submit rental records. The website's hosting provider may collect ordinary technical access logs.</p>
+        </section>
+        <section id="data">
+          <h2>2. Information the app handles</h2>
+          <p>Depending on what the operator enters or captures, AutoRentBoss can handle:</p>
+          <ul>
+            <li><strong>Business details:</strong> rental business name, representative, contact information, business address, registration information, and tax identification information.</li>
+            <li><strong>Vehicles:</strong> make, model, plate number, mileage, pricing, registration dates, condition photos, maintenance history, and OR/CR or other vehicle documents.</li>
+            <li><strong>Renters and drivers:</strong> names, phone or other contact details, primary-driver information, driver's-license images and extracted details, and supporting identification or documents.</li>
+            <li><strong>Reservations and rentals:</strong> booking schedules, status, checkout/return condition records, captured photos, signatures, signed agreements, and related notes.</li>
+            <li><strong>Financial records:</strong> rental charges, discounts, manual payment records, payment references or methods, security deposits, deductions, refunds, and reports.</li>
+            <li><strong>Technical information:</strong> limited device and app information needed for optional developer-access verification, and information processed by Google's advertising and consent SDKs as described below.</li>
+          </ul>
+          <p>The app is not a bank or payment processor. Recording a GCash, Maya, cash, bank, or card payment in the app does not mean AutoRentBoss itself transfers money or obtains the user's bank login or card security code.</p>
+        </section>
+        <section id="local">
+          <h2>3. Local-first storage</h2>
+          <p>Core rental business records are stored in a local SQLite database and app-managed file storage on the operator's device. In the implementation covered by this policy, the app does not automatically upload the operator's rental database, renter identification documents, vehicle documents, or signatures to an AutoRentBoss-managed cloud database.</p>
+          <p><strong>Local-first does not mean no network traffic.</strong> Google's advertising, consent, and Play services may communicate with their own servers. Information deliberately exported or shared by the operator may also leave the device.</p>
+          <p>The Android app currently allows Android operating-system backup (<code>android:allowBackup="true"</code>). Depending on Android version, device settings, and applicable backup rules, Google/Android system backup or device-transfer mechanisms may copy or restore app data. This is separate from the password-protected backups that the operator manually creates inside AutoRentBoss. We are reviewing this platform backup configuration before production release.</p>
+        </section>
+        <section id="camera">
+          <h2>4. Camera, photos, and documents</h2>
+          <p>With permission, AutoRentBoss uses the device camera or supported Android document-scanning features to capture vehicle photos, condition evidence, registration documents, driver's licenses, and other documents. The app may also allow selection of images or PDF files from device storage.</p>
+          <p>Google ML Kit / Google Play services may assist with document scanning and text recognition, including reading license details from selected images. The scanned results and confirmed records are saved to app-managed storage. Temporary copies are used during some workflows and are removed where the implementation supports cleanup.</p>
+          <p>Camera access is requested for relevant capture workflows rather than to record continuously. AutoRentBoss does not include continuous GPS vehicle tracking in the current app.</p>
+        </section>
+        <section id="ads">
+          <h2>5. Advertising, consent, and Google services</h2>
+          <p>AutoRentBoss integrates the <strong>Google Mobile Ads (AdMob) SDK</strong> for banner advertising on eligible Free-tier browsing screens, initially Dashboard and More, and Google's <strong>User Messaging Platform (UMP)</strong> to manage applicable consent and privacy choices. An advertisement loading failure does not cancel or reverse a rental or payment operation.</p>
+          <p>Google's advertising and consent services may automatically process or share technical information for ad delivery, measurement, fraud prevention, diagnostics, and privacy preferences, such as:</p>
+          <ul>
+            <li>IP address, which may indicate approximate location;</li>
+            <li>app and device details, advertising identifiers where available, and other device/account identifiers;</li>
+            <li>ad interactions and app-use events relevant to advertising; and</li>
+            <li>diagnostic and performance information, plus consent choices and signals.</li>
+          </ul>
+          <p>Depending on region and consent, Google may serve personalized, non-personalized, or limited ads. AutoRentBoss does not intentionally attach renter names, driver's-license images, reservation records, signatures, or the local rental database to its ad requests.</p>
+          <p>Where required, UMP presents a consent message. The app also provides an <strong>Ad Privacy</strong> entry under <strong>More</strong> to reopen applicable privacy options. Device-level advertising preferences can also be changed through Android settings.</p>
+          <p>Learn more in <a href="https://policies.google.com/privacy" rel="noopener noreferrer">Google's Privacy Policy</a> and <a href="https://developers.google.com/admob/android/privacy/play-data-disclosure" rel="noopener noreferrer">Google Mobile Ads data disclosures</a>.</p>
+        </section>
+        <section id="network">
+          <h2>6. Internet access and third-party services</h2>
+          <p>The app requests internet/network permissions for supported platform services and planned Free-tier connectivity controls. Google's SDKs may communicate with Google servers. The app does not currently operate a customer-facing AutoRentBoss cloud account or automatic cloud sync for rental records.</p>
+          <p>Google Play subscriptions are being prepared but are <strong>not yet a live purchase feature</strong> in the implementation reviewed for this policy. When payment subscriptions and server-side purchase verification become operational, this policy and applicable Play disclosures will be revised before release of that functionality.</p>
+          <p>The optional Support Development screen may display a contribution destination for the operator to use separately. Viewing or copying it does not transmit business records to the recipient through the app, and contributions do not grant Premium access.</p>
+        </section>
+        <section id="backups">
+          <h2>7. Backup, export, restore, and sharing</h2>
+          <p>AutoRentBoss can create password-protected encrypted <code>.arbbackup</code> exports containing its local database and managed supporting files. The app uses authenticated encryption for these operator-created archives; the backup password is needed for restoration.</p>
+          <p>Operators may export reports or agreements, save backups to Android Downloads, or use the Android file picker, share sheet, or another installed application to send files to a chosen recipient or storage provider. Once the operator shares a file, that recipient or provider is responsible for its subsequent handling under their own terms and privacy practices.</p>
+          <p><strong>Protect exported documents and backup passwords.</strong> Backups and reports may contain personal data. Uninstalling AutoRentBoss does not automatically remove files previously saved to Downloads, shared externally, or retained by system backup services.</p>
+        </section>
+        <section id="retention">
+          <h2>8. Data retention and deletion</h2>
+          <p>Rental, customer, vehicle, payment, and document records remain in local storage until the operator changes or removes them using an available app workflow, clears app data, or uninstalls the app. Certain completed business and financial records may be retained as historical evidence and cannot be deleted individually through the current interface.</p>
+          <p>Clearing app data or uninstalling typically removes its local private storage from the device, but may not delete exported copies, shared files, or Android/Google system backups. Operators must separately delete exports, backups, or documents wherever they stored them. Data processed by Google is subject to Google's own retention and deletion procedures.</p>
+          <p>AutoRentBoss currently does not require operators to register a cloud account, so there is no separate AutoRentBoss cloud account to delete in this version. For customer or driver records maintained by an operator, contact the relevant rental business to request correction or deletion, subject to applicable recordkeeping obligations.</p>
+        </section>
+        <section id="security">
+          <h2>9. Security</h2>
+          <p>AutoRentBoss uses app-managed private file storage, input validation, transaction safeguards for rental and financial records, controlled document viewing, and password-based encryption for operator-created backup archives. These protections reduce risk, but no application, device, network, or storage system is completely secure.</p>
+          <p><strong>Important distinction:</strong> encryption of exported backups does not mean that every copy of the active local SQLite database is encrypted at rest. Operators should secure their device with a screen lock, keep Android and Google Play services updated, use strong backup passwords, and share documents only with authorized recipients.</p>
+        </section>
+        <section id="rights">
+          <h2>10. Privacy choices and requests</h2>
+          <p>Operators can control which business records they enter, whether to capture optional photos or documents, whether to export or share data, and (where applicable) advertising privacy options. Android permissions can be managed in device settings.</p>
+          <p>If your request concerns information entered by a specific car-rental operator, that operator is the appropriate first contact because AutoRentBoss does not run a centralized renter database. For questions about the app or advertising integration, use the developer contact methods below.</p>
+        </section>
+        <section id="children">
+          <h2>11. Children</h2>
+          <p>AutoRentBoss is a business productivity tool intended for rental operators. It is not directed to children, and we do not knowingly design the app to solicit information from children.</p>
+        </section>
+        <section id="updates">
+          <h2>12. Changes to this policy</h2>
+          <p>We may update this policy as the app evolves, particularly when subscription verification, optional online services, or new data practices are introduced. The effective date above will be updated when changes are published. Google Play Data safety disclosures should be read together with the current policy.</p>
+        </section>
+        <section id="contact">
+          <h2>13. Contact and privacy inquiries</h2>
+          <p><strong>App/developer:</strong> AutoRentBoss</p>
+          <p>For general privacy policy or app-support inquiries, submit a request through the <a href="https://github.com/adrian1612/autorentboss-website/issues/new" rel="noopener noreferrer">AutoRentBoss website support/issues page</a>. <strong>GitHub issues are public:</strong> do not post renter names, identification images, contact numbers, backup files, or other private information there.</p>
+          <p>For private privacy requests, use the developer support email listed on the AutoRentBoss Google Play listing once available. If your inquiry concerns records maintained by a rental operator, contact that operator directly.</p>
+        </section>
+        <aside class="policy-disclaimer" aria-label="Policy note"><strong>Release note:</strong> This policy reflects the reviewed application implementation as of October 11, 2026. The developer should review the live build, SDK data disclosures, Google Play declarations, and a direct private contact address before publishing the app.</aside>
+      </article>
+    </div>
+  </main>
+  <footer class="site-footer"><div class="container footer-inner"><span>© 2026 AutoRentBoss</span><div><a href="./index.html">Home</a><a href="./privacy.html">Privacy Policy</a><a href="https://github.com/adrian1612/autorentboss-website/issues">Contact</a></div></div></footer>
+</body>
+</html>
