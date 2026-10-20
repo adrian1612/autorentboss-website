@@ -22,7 +22,7 @@
       <p class="eyebrow">Privacy &amp; transparency</p>
       <h1>Privacy Policy</h1>
       <p class="policy-lead">How the AutoRentBoss Android application handles rental business information, personal records, backups, advertising, and privacy choices.</p>
-      <p class="policy-date"><strong>Effective:</strong> October 11, 2026 <span aria-hidden="true">·</span> <strong>Application:</strong> AutoRentBoss (Android)</p>
+      <p class="policy-date"><strong>Effective:</strong> October 20, 2026 <span aria-hidden="true">·</span> <strong>Application:</strong> AutoRentBoss (Android)</p>
     </div></section>
     <div class="container policy-layout">
       <nav class="policy-toc" aria-label="Privacy policy sections">
@@ -65,7 +65,7 @@
           <h2>3. Local-first storage</h2>
           <p>Core rental business records are stored in a local SQLite database and app-managed file storage on the operator's device. In the implementation covered by this policy, the app does not automatically upload the operator's rental database, renter identification documents, vehicle documents, or signatures to an AutoRentBoss-managed cloud database.</p>
           <p><strong>Local-first does not mean no network traffic.</strong> Google's advertising, consent, and Play services may communicate with their own servers. Information deliberately exported or shared by the operator may also leave the device.</p>
-          <p>The Android app currently allows Android operating-system backup (<code>android:allowBackup="true"</code>). Depending on Android version, device settings, and applicable backup rules, Google/Android system backup or device-transfer mechanisms may copy or restore app data. This is separate from the password-protected backups that the operator manually creates inside AutoRentBoss. We are reviewing this platform backup configuration before production release.</p>
+          <p><strong>System backup is disabled:</strong> the current Android app sets <code>android:allowBackup="false"</code> and specifies data-extraction rules excluding app data from Android system/cloud backup and device-to-device transfer. Operators can instead create and separately store password-protected encrypted <code>.arbbackup</code> files using the app's manual Backup &amp; Restore feature. Files deliberately exported or shared may still be retained by the destination provider or recipient.</p>
         </section>
         <section id="camera">
           <h2>4. Camera, photos, and documents</h2>
@@ -75,7 +75,7 @@
         </section>
         <section id="ads">
           <h2>5. Advertising, consent, and Google services</h2>
-          <p>AutoRentBoss integrates the <strong>Google Mobile Ads (AdMob) SDK</strong> for banner advertising on eligible Free-tier browsing screens, initially Dashboard and More, and Google's <strong>User Messaging Platform (UMP)</strong> to manage applicable consent and privacy choices. An advertisement loading failure does not cancel or reverse a rental or payment operation.</p>
+          <p>AutoRentBoss integrates the <strong>Google Mobile Ads (AdMob) SDK</strong> for banner advertising on eligible Free-tier app screens, and Google's <strong>User Messaging Platform (UMP)</strong> to manage applicable consent and privacy choices. An advertisement loading failure does not cancel or reverse a rental or payment operation.</p>
           <p>Google's advertising and consent services may automatically process or share technical information for ad delivery, measurement, fraud prevention, diagnostics, and privacy preferences, such as:</p>
           <ul>
             <li>IP address, which may indicate approximate location;</li>
@@ -89,8 +89,8 @@
         </section>
         <section id="network">
           <h2>6. Internet access and third-party services</h2>
-          <p>The app requests internet/network permissions for supported platform services and planned Free-tier connectivity controls. Google's SDKs may communicate with Google servers. The app does not currently operate a customer-facing AutoRentBoss cloud account or automatic cloud sync for rental records.</p>
-          <p>Google Play subscriptions are being prepared but are <strong>not yet a live purchase feature</strong> in the implementation reviewed for this policy. When payment subscriptions and server-side purchase verification become operational, this policy and applicable Play disclosures will be revised before release of that functionality.</p>
+          <p>The app requests internet/network permissions for Google Play Billing, advertising and consent services and Free-tier connectivity checks. In commercial Android Release builds, Free operators need an internet connection to create new vehicles or new reservations; existing rental operations, returns, financial records, exports and manual backups remain available without that requirement. Premium has additional offline capabilities under a locally cached eligibility allowance. Google's SDKs may communicate with Google servers. AutoRentBoss does not operate a customer-facing cloud account or automatically upload the local rental database.</p>
+          <p><strong>Google Play subscriptions:</strong> AutoRentBoss offers an optional, automatically renewing Premium subscription with monthly and annual billing plans purchased through Google's Play Billing system. Available prices, renewals, payment handling, cancellation and subscription management are provided by Google Play. The app reads matching Play subscription ownership on the device, caches limited local eligibility timestamps in Android secure storage, and acknowledges eligible completed purchases after granting access. It does not store Google Play purchase tokens in the rental database or operate its own payment processor. It does not currently use a custom subscription-verification server or real-time developer notifications; offline access and delayed network checks therefore cannot guarantee instantaneous reflection of refunds, subscription expiry, or revocations. Users can open Google Play's subscription management page from My Plan.</p>
           <p>The optional Support Development screen may display a contribution destination for the operator to use separately. Viewing or copying it does not transmit business records to the recipient through the app, and contributions do not grant Premium access.</p>
         </section>
         <section id="backups">
@@ -102,7 +102,7 @@
         <section id="retention">
           <h2>8. Data retention and deletion</h2>
           <p>Rental, customer, vehicle, payment, and document records remain in local storage until the operator changes or removes them using an available app workflow, clears app data, or uninstalls the app. Certain completed business and financial records may be retained as historical evidence and cannot be deleted individually through the current interface.</p>
-          <p>Clearing app data or uninstalling typically removes its local private storage from the device, but may not delete exported copies, shared files, or Android/Google system backups. Operators must separately delete exports, backups, or documents wherever they stored them. Data processed by Google is subject to Google's own retention and deletion procedures.</p>
+          <p>Clearing app data or uninstalling typically removes its local private storage from the device, but does not necessarily delete copies already exported, shared or stored manually with third parties. Android's automatic backup of this app is disabled in the current manifest; operators remain responsible for deleting their own exported archives and documents where they saved them. Data processed by Google is subject to Google's own retention and deletion procedures.</p>
           <p>AutoRentBoss currently does not require operators to register a cloud account, so there is no separate AutoRentBoss cloud account to delete in this version. For customer or driver records maintained by an operator, contact the relevant rental business to request correction or deletion, subject to applicable recordkeeping obligations.</p>
         </section>
         <section id="security">
@@ -121,7 +121,7 @@
         </section>
         <section id="updates">
           <h2>12. Changes to this policy</h2>
-          <p>We may update this policy as the app evolves, particularly when subscription verification, optional online services, or new data practices are introduced. The effective date above will be updated when changes are published. Google Play Data safety disclosures should be read together with the current policy.</p>
+          <p>We may update this policy if subscription verification, third-party SDKs, cloud features, or other data practices change. The effective date above will be updated when changes are published. Please review the current policy and Google Play Data safety declarations together.</p>
         </section>
         <section id="contact">
           <h2>13. Contact and privacy inquiries</h2>
@@ -129,7 +129,7 @@
           <p>For general privacy policy or app-support inquiries, submit a request through the <a href="https://github.com/adrian1612/autorentboss-website/issues/new" rel="noopener noreferrer">AutoRentBoss website support/issues page</a>. <strong>GitHub issues are public:</strong> do not post renter names, identification images, contact numbers, backup files, or other private information there.</p>
           <p>For private privacy requests, use the developer support email listed on the AutoRentBoss Google Play listing once available. If your inquiry concerns records maintained by a rental operator, contact that operator directly.</p>
         </section>
-        <aside class="policy-disclaimer" aria-label="Policy note"><strong>Release note:</strong> This policy reflects the reviewed application implementation as of October 11, 2026. The developer should review the live build, SDK data disclosures, Google Play declarations, and a direct private contact address before publishing the app.</aside>
+        <aside class="policy-disclaimer" aria-label="Policy note"><strong>Scope:</strong> This policy reflects the Android application source reviewed on October 20, 2026. Before public release, the developer must ensure that Google Play Data safety declarations, SDK data collection disclosures, and the private support contact listed in Play Console remain accurate.</aside>
       </article>
     </div>
   </main>
