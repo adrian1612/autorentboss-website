@@ -31,3 +31,21 @@ body:has(.cinematic-hero){background:#fff}.landing-header{position:relative;back
  .editorial-features { padding-top:55px; padding-bottom:40px; }
  .workflow-section.section-space { padding-top:55px; padding-bottom:60px; }
 }
+
+/* Consistent inline SVG sprites, no icon fonts, emoji, or Unicode glyphs. */
+.ui-icon{width:18px;height:18px;display:inline-block;flex:none;vertical-align:-.16em;fill:none;stroke:currentColor;stroke-width:1.9;stroke-linecap:round;stroke-linejoin:round}
+.nav-cta .ui-icon,.button-main .ui-icon,.button-quiet .ui-icon,.cinematic-button .ui-icon,.editorial-card-copy a .ui-icon,.plan-action .ui-icon{width:17px;height:17px}
+.cinematic-play .ui-icon{width:15px;height:15px;stroke-width:2}
+.hero-quick-nav a>.ui-icon-feature{width:25px;height:25px;color:#76e0d8}
+.hero-quick-nav a>.ui-icon-chevron{width:17px;height:17px;margin-left:auto;color:#88ddd7}
+.cinematic-ribbon .ui-icon-ribbon{width:37px;height:37px;stroke-width:1.5;color:#d7f5f3}
+.editorial-card-icon .ui-icon-feature{width:27px;height:27px;color:#0a8790}
+.plan-card li{display:flex;align-items:flex-start;gap:12px;padding-left:0}
+.plan-card li:before{content:none!important}
+.plan-card li .ui-icon-check{width:15px;height:15px;margin-top:3px;color:#168d84;stroke-width:2.5}
+.plan-featured li .ui-icon-check{color:#a8e8d8}
+.plan-action{display:flex;align-items:center;justify-content:center;gap:9px}
+.faq-items summary .ui-icon-faq{width:19px;height:19px;color:#198d86;transition:transform .2s}
+.faq-items details[open] summary .ui-icon-faq{transform:rotate(180deg)}
+.closing-link .ui-icon{margin-left:7px}
+@media(prefers-reduced-motion:reduce){.faq-items summary .ui-icon-faq{transition:none}}

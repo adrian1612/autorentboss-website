@@ -49,3 +49,7 @@ The homepage now follows the operator-approved photographic concept, using a rea
 All these photographs are marked free to use under the Unsplash License. They are decorative and do not depict AutoRentBoss customers. The phone mockup is an illustration, **not** a verified screenshot of the Android app. `approved.css` extends the existing static site's styles without affecting the privacy policy.
 
 No fictitious app statistics, nonexistent Play Store links, user testimonials or online booking features have been added.
+
+## Unified website SVG iconography
+
+`assets/ui-icons.svg` is a local reusable outline icon sprite. CTA arrows, plan checkmarks, FAQ chevrons and feature icons use `<svg aria-hidden="true"><use href="./assets/ui-icons.svg#icon-id"></use></svg>`. Styling comes from `approved.css`; no icon CDN or font dependency. The privacy page now uses the same app logo in its header without altering policy text.
