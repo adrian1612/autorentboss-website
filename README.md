@@ -35,3 +35,17 @@ The repository is public but GitHub Pages has **not** been enabled as of this co
 Current AutoRentBoss source reviewed: `adrian1612/AutoRentBoss` `master` at `ffb92997a74c31b74dee49f002a4cc98276adb6a`.
 
 **No GitHub Actions were manually triggered.** This website requires no dependencies or build system.
+
+
+## Approved cinematic homepage (October 2026)
+
+The homepage now follows the operator-approved photographic concept, using a realistic sedan hero and photographic vehicle/contract feature panels. The hero and feature images are externally hosted on Unsplash; mobile and desktop layouts must be checked after Pages publishes.
+
+- Hero: Ilya Godze — https://unsplash.com/photos/black-luxury-sedan-parked-on-a-wet-street-at-night-9xhwtVIM0dE
+- Vehicle-key photo: Nathan Dumlao — https://unsplash.com/photos/black-and-silver-keys-on-black-textile-wN7Dtu0saNs
+- Signing photo: Jakub Żerdzicki — https://unsplash.com/photos/man-signing-a-document-with-a-pen-QI6NLgN5XnM
+- Blurred mobile mockup background: Fernando Hernandez — https://unsplash.com/photos/a-black-car-parked-in-a-garage-DmvrGxLF4F8
+
+All these photographs are marked free to use under the Unsplash License. They are decorative and do not depict AutoRentBoss customers. The phone mockup is an illustration, **not** a verified screenshot of the Android app. `approved.css` extends the existing static site's styles without affecting the privacy policy.
+
+No fictitious app statistics, nonexistent Play Store links, user testimonials or online booking features have been added.
